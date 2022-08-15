@@ -1,5 +1,6 @@
 const pool = require('../../config/db');
 const mysql = require("mysql");
+const bcrypt = require("bcrypt");
 
 
 module.exports = {
