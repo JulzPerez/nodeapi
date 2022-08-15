@@ -12,7 +12,7 @@ app.get("/", (req,res)=>{
     });
 });  
 
-app.use("/api/users", userRouter);
+app.use("/users", userRouter);
 
 app.listen(process.env.APP_PORT, ()=> {
     console.log("Server is up and running on PORT=", process.env.APP_PORT);

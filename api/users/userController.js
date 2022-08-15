@@ -1,9 +1,10 @@
-const {countUserByEmail, getUsers} = require('./userService');
+const {getUserProfile, getUsers} = require('./userService');
 
 module.exports = {
-    countUser: (req,res) => {
+    getUserProfile: (req,res) => {
         //const email = req.params.email;
-        countUserByEmail(req, (err,results) => {
+        console.log("Params: ", req.body);
+        getUserProfile(req, (err,results) => {
             if(err){
                 console.log(err);
                 return res.status(500).json({
