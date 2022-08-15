@@ -3,10 +3,10 @@ const mysql = require("mysql");
 const bcrypt = require("bcrypt");
 
 module.exports = {
-    getUserProfile: (data, callback) => {
+    getUserProfile: async (data, callback) => {
         const email_ = data.body.email;
         const password_ = data.body.password
-        const hashedPassword =  bcrypt.hash(password_, 10);
+        const hashedPassword = await bcrypt.hash(password_, 10);
         console.log("Email is ", email_);
         console.log("Password is ", hashedPassword);
 
